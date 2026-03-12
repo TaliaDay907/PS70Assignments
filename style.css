@@ -11,6 +11,19 @@ body {
     padding-top: 0px !important;
   }
 
+  body-2 {
+   
+    font: 20px "Zain", Verdana, sans-serif;
+    line-height: 1.8;
+    color: ghostwhite;
+    background-image: url('Mountain.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 0px !important;
+  }
+
 .textcontainer {
   padding: 2% 10%;;
 }
