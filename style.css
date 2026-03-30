@@ -122,3 +122,7 @@ code {
 #aboutme {
   padding: 20px;
 }
+
+iframe:focus {
+  outline: none;
+}
