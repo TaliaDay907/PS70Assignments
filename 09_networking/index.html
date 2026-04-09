@@ -95,15 +95,15 @@ void blinkLED();
 const char* PARAM_INPUT_1 = "Song Title";
 
 const char index_html[] PROGMEM = R"rawliteral(
-<!DOCTYPE HTML><html><head>
-  <title>ESP Input Form</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head><body>
-  <form action="/get">
-    Song Title: <input type="text" name="Song Title">
-    <input type="submit" value="Submit">
-  </form>
-</body></html>)rawliteral";
+&lt;!DOCTYPE HTML>&lt;html>&lt;head>
+  &lt;title>ESP Input Form&lt;/title>&lt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+  &lt;/head>&lt;body>
+  &lt;form action="/get">
+    Song Title: &lt;input type="text" name="Song Title">
+    &lt;input type="submit" value="Submit">
+  &lt;/form>
+&lt;/body>&lt;/html>)rawliteral";
 
 void notFound(AsyncWebServerRequest *request) {
   request->send(404, "text/plain", "Not found");
