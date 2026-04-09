@@ -32,18 +32,14 @@
 
 <img width="500"  src="./Toast.jpeg" alt="week7-placeholder-image.jpg">
 
-<p class="margin">
-  Breadboard Version 1
-</p>
+<h5>Breadboard Version 1</h5>
 
 <video controls style="width: 200%; flex-shrink: 0; max-width: 400px;">
   <source src="./Test1.MOV" type="video/mp4">
   Your browser does not support the video tag. <a href="./Test1.MOV">Download the video</a> instead.
 </video>
 
-<p class="margin">
-  First test
-</p>
+<h5>First Test</h5>
 
 <p class="margin">
   We were origionally going to use the tempo of the Spotify API, however we had to switch gears as we realized that Spotify's API no longer gives the tempo of songs as Spotify depricated song tempos and many other features. 
@@ -51,20 +47,21 @@
 
 <h4>Assignment: [Program something with IOT]</h4>
 
+<p class="margin">
+  Because of this issue, we ended up using SoundCharts as our API instead. As API’s need an ID and Key, we added a request to our code for the API to get a song back. Most of functions within this code we made is manipulation of the  string for the API to understand what we are asking. We also added Functions (URL and code spaces) to translate “normal” text into text readable for the API. GetSongID is retrieving the song we’re searching for. The API sends back multiple songs, so “get back first song” was to make sure we got the song that was requested. We then requested tempo from the API, and extracted the tempo. Lastly, we coded it so that the LED will blink in turn with the tempo from the song. 
+</p>
+
 <img width="500"  src="../Bagel.jpeg" alt="week7-placeholder-image.jpg">
 
-<p class="margin">
-  Breadboard Version 2
-</p>
+<h5>Breadboard Version 2</h5>
 
 <video controls style="width: 200%; flex-shrink: 0; max-width: 800px;">
   <source src="./Test2.MOV" type="video/mp4">
   Your browser does not support the video tag. <a href="./Test2.MOV">Download the video</a> instead.
 </video>
 
-<p class="margin">
-  Final version, blinking to the beat of "Porch Light" by Noah Kahan (119 BPM)
-</p>
+
+<h5>Final version, blinking to the beat of "Porch Light" by Noah Kahan (119 BPM)</h5>
 
 <h4>Code:</h4>
 
@@ -325,6 +322,15 @@ void blinkLED() {
   }
 }
   </pre>
+
+  <h4>Website</h4>
+  <p class="margin">
+  To build in the Wifi component of our assignment, we implemented into the code an asynchronous web sever(connected to the Makerspace Wifi) where anyone can input songs that the LEDs will blink in tempo with, and the ESP will update the song title (the input) in the code with the new title (variable) without having to manually change the code. We had Arduino generate an IP address, that only works when the ESP32 is turned on (so when it is turned off the website does not work). The code was partially inspired by Random Nerd Tutorial's example code for the step-by-step instructions on inputing data on a HTML Form ESP32 Web Server with Arduino IDE:(https://randomnerdtutorials.com/esp32-esp8266-input-data-html-form/). We had to fiddle around with downloading the ESPAsyncWebServer libraires, as different versions had different bugs that had not yet been fixed. We then connected the code to the local network (MAKERSPACE).
+</p>
+  <img width="800"  src="./Website1.jpeg" alt="week7-placeholder-image.jpg">
+  <h5>Our home page with song title input</h5>
+  <img width="800"  src="./Website2.jpeg" alt="week7-placeholder-image.jpg">
+  <h5>2nd page that shows up after requesting songs (in this case "circles")</h5>
 
 </div>
 </xmp>
